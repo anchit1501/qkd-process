@@ -1,0 +1,29 @@
+{
+    "input": [
+        "#qubitSlider", "#deltaSlider", "#eveDeltaSlider", "#biasedErrCheckbox", "#errSampleRateSlider",
+        "#errToleranceSlider", "#eveCheckbox", "#eveRateSlider"
+    ],
+    "range": [
+        [500, 600, 10],
+        [0, 1.0, 0.05],
+        [0, 1.0, 0.05],
+        [0, 1, 1],
+        [0, 1.0, 0.05],
+        [0, 1.0, 0.05],
+        [0, 1, 1],
+        [0, 1.0, 0.05]
+    ],
+    "simulate": "#simButton",
+    "regex": "<td>(\\d+(\\.\\d+)?)</td>",
+    "header": [
+        "Initial Qubits - Input", "Basis choice bias delta - Input", "Eve basis choice bias - Input",
+        "Biased error estimation enabled - Input", "Error estimation sampling rate - Input",
+        "Error tolerance - Input", "Eve enabled - Input", "Eavesdropping rate - Input",
+        "Initial number of qubits", "Final key length", "Estimated error", "Eavesdropping enabled",
+        "Eavesdropping rate", "Alice-Bob basis selection bias", "Eve basis selection bias",
+        "Raw key mismatch before error correction", "Raw key mismatch after error correction",
+        "Information leakage", "Overall key cost for authentication",
+        "Key length before error correction", "Bit error probability",
+        "Bits leaked during error correction", "Shannon bound for leakage", "Security parameter"
+    ]
+}

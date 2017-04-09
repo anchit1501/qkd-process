@@ -1,0 +1,35 @@
+##To run script and fill the sheet automatically.
+
+1. npm install -g phantomjs
+2. npm install -g casperjs
+3. cd to current folder
+4. node index.js (max 50 entries)
+
+##To get data of missing input values
+
+1. Open Chrome
+2. https://www.qkdsimulator.com
+3. Use this code
+
+inp = [] (list of 8 input values in order based on the site)
+{Remember to copy this string before clicking the button}
+
+regex = /\d+(\.\d+)?/g
+inp = inp.match(regex)
+inp = inp.map((val) => Number(val))
+
+for(i=0;i<8;i++)
+    $('form#simForm')[0].children[3].children[1].children[i].children[1].children[0].value = inp[i]
+
+$('button#simButton').click()
+
+paste inp copied string
+
+out = $('table')[1].children[1].children
+op = []
+for(i=0;i<out.length;i++)
+    op.push(Number(out[i].children[1].innerHTML))
+
+res = inp.concat(op)
+
+4. Email this res on a separate line
